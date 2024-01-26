@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+<div class="row">
+<div class="col-md-3">
+<img src="{{i.pict.url}}" height="300" width="200">
+</div>
+
+<div class="col-md-3">
+<h3>{{i.name}}</h3>
+<h6>{{i.desc}}</h6>
+<a class="btn btn-warning" href="{% url 'newapp:update' i.id %}">update</a>
+<a class="btn btn-danger" href="{% url 'newapp:delete' i.id %}">delete</a>
+</div>
+</div></div>
+{% endblock %}
